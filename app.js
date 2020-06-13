@@ -14,7 +14,8 @@ mongoose.connect(
      useNewUrlParser: true,
      useUnifiedTopology: true
     }
-  );
+);
+mongoose.Promise = global.Promise;
 
 app.use(morgan('dev'));
 app.use(bodyParser.urlencoded({extended: false}));
